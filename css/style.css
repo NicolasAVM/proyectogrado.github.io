@@ -1,0 +1,385 @@
+/* Colores */
+:root
+{
+    --button-color: #010D82;
+    --background-color: #f6f6f6;
+    --main-color: #010D82;
+    --white: #ffffff;
+    --secundary-color: #51C9FF;
+    --color-email-footer: #0E1238;
+    --color-forms: #F8FBFE;
+}
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    font-size: 62.5%;
+}
+body
+{
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+}
+/* Header */
+header
+{
+    width: 100%;
+    min-width: 320px;
+    height: 150px;
+}
+/* navbar */
+.header_navbar
+{
+    display: flex;
+    justify-content: space-around;
+}
+.header_nav_section_one
+{
+    display: flex;
+    align-items: center;
+    margin: 30px 5px 5px 5px;
+    gap: 5px;
+}
+.header_nav_image
+{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+.header_nav_title
+{
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.header_nav_title a
+{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.header_nav_section_ul
+{
+    align-self: center;
+    width: 50%;
+    gap: 10px;
+}
+.checkbtn
+{
+    font-size: 3rem;
+    color: var(--button-color);
+    float: right;
+    line-height: 60px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+#check
+{
+    display: none;
+}
+.header_nav_ul
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.header_nav_ul a
+{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.6rem;
+}
+.header_nav_ul li
+{
+    list-style: none;
+}
+.header_nav_section_two
+{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 30px;
+}
+.header_nav_iniciarSes
+{
+    font-size: 1.6rem;
+    color: var(--main-color);
+    text-decoration: none;
+}
+.btn
+{
+    width: 120px;
+    height: 50px;
+    padding: 6px;
+    font-size: 1.5rem;
+    color: var(--white);
+    border: 1rem solid var(--button-color);
+    border-radius: 0.8rem;
+    background-color: var(--button-color);
+    text-align: center;
+    text-decoration: none;
+}
+.btn:hover
+{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 16px var(--button-color);
+    transition: all 0.2s ease;
+}
+/* main content */
+main
+{
+    width: 100%;
+    height: auto;
+}
+.main_section_content
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 5px;
+}
+.main_section_left
+{
+    padding: 45px;
+    align-self: center;
+}
+.main_section_left_p
+{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--secundary-color);
+}
+.main_section_left_span_two
+{
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+.main_section_left_decoration
+{
+    display: flex;
+    width: 280px;
+    height: 35px;
+    margin-bottom: 30px;
+}
+.main_section_left_p_two
+{
+    margin-bottom: 50px;
+    font-size: 18px;
+    color: #84879E;
+}
+.main_btn_div
+{
+    display: flex;
+    justify-content: space-between;
+}
+.main_btn
+{
+    width: 185px;
+    height: 60px;
+    padding: 12px;
+    font-size: 1.6rem;
+    border: 10px solid var(--button-color);
+    border-radius: 8px;
+    background-color: var(--button-color);
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.main_btn:hover
+{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 16px var(--button-color);
+    transition: all 0.2s ease;
+}
+.main_section_right_image
+{
+    width: 500px;
+    height: 500px;
+}
+/* forms main */
+.main_form_content
+{
+    min-width: 320px;
+    height: auto;
+    text-align: center;
+}
+.main_section_content_p
+{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--secundary-color);
+}
+.main_title_form
+{
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 100px;
+    color: var(--main-color);
+}
+.main_section_form
+{
+    margin: 65px;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: var(--secundary-color);
+}
+.main_section_div_form_div
+{
+    display: flex;
+    justify-content: center;
+}
+.main_section_div_form_areabtn
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input, textarea
+{
+    border: 0;
+    outline: none;
+}
+.input
+{
+    width: 400px;
+    height: 80px;
+    margin: 25px;
+    padding: 8px;
+    font-size: 1.8rem;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+}
+.input_area
+{
+    width: 850px;
+    height: 400px;
+    margin: 25px;
+    padding: 8px;
+    font-size: 2rem;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+}
+.input:focus
+{
+    border-color: var(--main-color);
+}
+.input_area:focus
+{
+    border-color: var(--main-color);
+}
+/* footer */
+footer
+{
+    width: 100%;
+    height: auto;
+}
+.footer_container
+{
+    background-color: var(--main-color);
+}
+.footer_container_sections
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer_section
+{
+    margin: 20px;
+    padding: 20px;
+}
+.footer_section_div_logo
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.footer_div_image
+{
+    width: 45px;
+    height: 45px;
+}
+.footer_div_title
+{
+    font-size: 1.6rem;
+    font-weight: 1000;
+    color: var(--white);
+}
+.footer_section_p
+{
+    margin-top: 30px;
+    font-size: 1.6rem;
+    line-height: 25px;
+    color: var(--white);
+}
+.footer_section_div_redes
+{
+    width: 20px;
+    height: 20px;
+    margin: 40px 10px 20px 0;
+}
+.footer_div_title_sections
+{
+    font-size: 1.8rem;
+    font-weight: 1000;
+    line-height: 50px;
+    color: var(--white);
+}
+.footer_div_lists
+{
+    list-style: none;
+}
+.footer_div_lists a
+{
+    color: var(--white);
+    text-decoration: none;
+}
+.footer_div_lists li
+{
+    margin: 20px 0 20px 0;
+    font-size: 1.6rem;
+    line-height: 25px;
+}
+.footer_input
+{
+    width: 300px;
+    height: 55px;
+    margin: 30px 0 5px 0;
+    padding: 10px;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: var(--color-email-footer);
+    color: var(--white);
+}
+.icon_arrow
+{
+    position: absolute;
+    top: 2015px;
+    left: 1360px;
+    cursor: pointer;
+}
+.icon_arrow img
+{
+    width: 30px;
+    height: 30px;
+}
+.footer_div_lists
+{
+    color: var(--white);
+}
+.footer_span
+{
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    font-size: 1.8rem;
+    color: var(--white);
+}
