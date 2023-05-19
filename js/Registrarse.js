@@ -12,7 +12,12 @@ $('#registro').submit(function(e){
       var password = $('#password').val();
       if (password.length < 8) {
         console.log("La contraseña no es valida");
-        alert("La contraseña no es valida");
+        Swal.fire({
+          position: 'center',
+          title: 'La contraseña debe tener como minimo 8 caracteres',
+          showConfirmButton: false,
+          timer: 150000
+        })
         return;
       }
       var password_codificado = btoa(password);
@@ -28,7 +33,13 @@ $('#registro').submit(function(e){
     .done(function(data) {
     
         console.log("todo bien")
-        alert("Se a registrado el Ususario con exito");
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Se a registrado el Ususario con exito',
+          showConfirmButton: false,
+          timer: 1500
+        })
         window.location.href = 'iniciarSesion.html';
     })
    

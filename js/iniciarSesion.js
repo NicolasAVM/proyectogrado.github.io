@@ -27,7 +27,7 @@ $('#Login').submit(function(e) {
                     // icon: 'success',
                     title: respuesta.mensaje,
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 1500000
                   })
                 
             }

@@ -1,4 +1,3 @@
-
 <!-- INICIO MODAL CREAR -->
 <div class="modal fade" id="modCrear" tabindex="-1" role="dialog" aria-labelledby="modCrear" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -12,31 +11,17 @@
         <form id="fromCrear">
             <div class="modal-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nombre del proyecto</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="Nombre" placeholder="Nombre del proyecto" required>
+                        <label for="exampleInputEmail1">Cantidad del prestamo</label>
+                        <input type="text" class="form-control" id="prestamo" name="prestamo" aria-describedby="Nombre" placeholder="Nombre del proyecto" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Costo del proyecto</label>
-                        <input type="text" class="form-control" id="costo_fijo" name="costo_fijo" aria-describedby="Apellido" placeholder="Costo del proyecto" required>
+                        <label for="exampleInputEmail1">tiempo a pagar</label>
+                        <input type="text" class="form-control" id="tiempo" name="tiempo" aria-describedby="Apellido" placeholder="Costo del proyecto" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Posibles costos</label>
-                        <input type="text" class="form-control" id="costo_variable" name="costo_variable" aria-describedby="Documento" placeholder="Posibles costos" required>
+                        <label for="exampleInputEmail1">interes</label>
+                        <input type="text" class="form-control" id="interes" name="interes" aria-describedby="Documento" placeholder="Posibles costos" required>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Presupuesto Mensual</label>
-                        <input type="text" class="form-control" id="presupuesto" name="presupuesto" aria-describedby="Documento" placeholder="presupuesto" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Tipo</label>
-                        <select class="form-control" id="Tipo" name="Tipo" required>
-                        <option value="Corto Plaso">Corto Plaso</option>
-                        <option value="Mediano Plaso">Mediano Plaso</option>
-                        <option value="Largo Plaso">Largo Plaso</option>
-                        </select>
-
-                    </div>
-                    
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -78,11 +63,11 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ahorro de este mes</label>
-                        <input type="text" class="form-control" id="ahorro_mes" name="ahorro_mes" aria-describedby="Documento" placeholder="aporte del mes" required>
+                        <input type="text" class="form-control" id="ahorro_mes" name="ahorro_mes" aria-describedby="Documento" placeholder="presupuesto" required>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ahorro total</label>
-                        <input type="text" class="form-control" id="ahorro_total" name="ahorro_total" aria-describedby="Documento" placeholder="" disabled>
+                        <input type="text" class="form-control" id="ahorro_total" name="ahorro_total" aria-describedby="Documento" placeholder="presupuesto" disabled>
                     </div>
                     <div class="form-group">
                     <label for="exampleInputEmail1">Tipo</label>

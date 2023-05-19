@@ -54,20 +54,18 @@
 </nav>
 <main>
 <div class="row cabeza">
-            <p>Gestión Financiera</p>
-            <button type="button" class="btn btn-primary" id="crear" style= "margin-bottom: 20px;">Agregar Proyecto</button>
+            <p>Manejo de deudas</p>
+            <button type="button" class="btn btn-primary" id="crear" style= "margin-bottom: 20px;">Agregar Deuda</button>
     </div>
     <section class="main_section_table">
         <table class="table" id="listar">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Objetivo</th>
-                    <th>costo fijo</th>
-                    <th>costo variable</th>
-                    <th>categoria</th>
-                    <th>presupuesto</th>
-                    <th>ahorro total</th>
+                    <th>Valor del prestamo</th>
+                    <th>Tiempo de duracion</th>
+                    <th>Interes</th>
+                    <th>Deuda actual</th>
                     <th>estado</th>
                     <th>Acciones</th>
                 </tr>
@@ -80,8 +78,8 @@
     </section>
     
 </main>
-<?php include_once('modal/modal.php')?>
-<script src="js/menu.js" type="text/javascript"></script>
+<?php include_once('modal/deudas.php')?>
+<script src="js/deudas.js" type="text/javascript"></script>
 <!-- CDN JQUEY -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- CDN POPER -->

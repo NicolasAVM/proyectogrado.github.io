@@ -1,11 +1,11 @@
 $(document).ready(function() {
     console.log('llegas a js menu');
-    listarproyectos()
+    listarprestamos()
 });
 
-function listarproyectos(){
+function listarprestamos(){
     $.ajax({
-        url: 'controlador/menu.php',
+        url: 'controlador/deudas.php',
         type: 'POST',
         dataType: 'json',
         data: {opcn:'listarproyectos'},
@@ -15,13 +15,11 @@ function listarproyectos(){
         res.forEach(el => {
             tr += `<tr>
             
-            <td data-label='id'>${el.id_proyectos}</td>
-            <td data-label='Nombre'>${el.objetivo}</td>
-            <td data-label='costo fijo'>$${el.costo_fijos}</td>
-            <td data-label='costo variable'>$${el.costos_variables}</td>
-            <td data-label='categoria'>${el.categoria}</td>
-            <td data-label='presupuesto'>$${el.presupuesto}</td>
-            <td data-label='ahorro total'>$${el.ahorro_total}</td>
+            <td data-label='id'>${el.id_prestamo}</td>
+            <td data-label='Nombre'>$${el.valor_prestamo}</td>
+            <td data-label='costo fijo'>${el.tiempo_pago}</td>
+            <td data-label='costo variable'>${el.interes}%</td>
+            <td data-label='costo variable'>$${el.deuda_actual}</td>
             <td data-label='Estado'>${el.estado}</td>
             <td data-label='Acciones'>
                     <button type="button" class="btn btn-primary btn-sm editar" data-id= "${el.id_proyectos}">Editar</button>
@@ -56,7 +54,7 @@ $('#modCrear').submit(function(e){
     datos.push({name:'opcn',value:'crear'})
     
     $.ajax({
-        url: 'controlador/menu.php',
+        url: 'controlador/deudas.php',
         type: 'POST',
         dataType: 'json',
         data: datos,
@@ -70,7 +68,7 @@ $('#modCrear').submit(function(e){
             showConfirmButton: false,
             timer: 1500
           })
-          listarproyectos()
+          listarprestamos()
     })
     .fail(function() {
         console.log("error");
@@ -82,7 +80,7 @@ $('body').on('click','.editar', function(){
     let id = $(this).data('id')
     console.log(id)
     $.ajax({
-        url: 'controlador/menu.php',
+        url: 'controlador/deudas.php',
         type: 'POST',
         dataType: 'json',
         data: {opcn: 'verXid',id},
@@ -94,7 +92,6 @@ $('body').on('click','.editar', function(){
         $('#costo_fijo1').val(res.costo_fijos)
         $('#costo_variable1').val(res.costos_variables)
         $('#presupuesto1').val(res.presupuesto)
-        $('#ahorro_total').val(res.ahorro_total)
         $('#Tipo1').val(res.categoria)
     })
     .fail(function() {
@@ -109,7 +106,7 @@ $('#modEditar').submit(function(e){
     datos.push({name:'opcn',value:'update'})
     
     $.ajax({
-        url: 'controlador/menu.php',
+        url: 'controlador/deudas.php',
         type: 'POST',
         dataType: 'json',
         data: datos,
@@ -123,10 +120,9 @@ $('#modEditar').submit(function(e){
             showConfirmButton: false,
             timer: 1500
           })
-          listarproyectos()
+          listarprestamos()
     })
     .fail(function() {
         console.log("error");
     })  
 })
-
