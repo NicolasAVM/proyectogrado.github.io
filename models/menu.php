@@ -49,7 +49,9 @@ class Proyectos {
                                 objetivo        = '{$v['nombre1']}',
                                 costo_fijos      = '{$v['costo_fijo1']}',
                                 costos_variables     = '{$v['costo_variable1']}',
-                                presupuesto        = '{$v['presupuesto1']}'
+                                presupuesto        = '{$v['presupuesto1']}',
+                                ahorro_total        = '{$v['ahorro_total']}'
+
                             WHERE  id_proyectos         = '{$v['id']}'");
         return $update;
     }

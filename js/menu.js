@@ -105,8 +105,14 @@ $('body').on('click','.editar', function(){
 $('#modEditar').submit(function(e){
     e.preventDefault();
     let datos = $('#fromEditar').serializeArray();
-    
+    let ahorro_mes = document.getElementById("ahorro_mes").value;
+    let ahorro_total = document.getElementById("ahorro_total").value;
+    let mes = parseInt(ahorro_mes);
+    let total_ = parseInt(ahorro_total);
+    let total = mes + total_;
+
     datos.push({name:'opcn',value:'update'})
+    datos.push({name:'ahorro_total',value: total})
     
     $.ajax({
         url: 'controlador/menu.php',
