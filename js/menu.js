@@ -24,10 +24,11 @@ function listarproyectos(){
             <td data-label='ahorro total'>$${el.ahorro_total}</td>
             <td data-label='Estado'>${el.estado}</td>
             <td data-label='Acciones'>
-                    <button type="button" class="btn btn-primary btn-sm editar" data-id= "${el.id_proyectos}">Editar</button>
-                    <button type="button" class="btn btn-danger btn-sm eliminar" data-id= "${el.id_proyectos}">finalizar</button>
-                       
+                <span class="mensaje-finalizado" ${el.estado === 'Finalizado' ? 'style="display: block;"' : 'style="display: none;"'}>Proyecto finalizado</span>
+                <button type="button" class="btn btn-primary btn-sm editar" data-id="${el.id_proyectos}" ${el.estado === 'Finalizado' ? 'style="display: none;"' : ''}>Editar</button>
+                <button type="button" class="btn btn-danger btn-sm eliminar" data-id="${el.id_proyectos}" ${el.estado === 'Finalizado' ? 'style="display: none;"' : ''}>Finalizar</button>
             </td>
+
             </tr>`
         });
         $('#listar tbody').html(tr);
@@ -134,5 +135,41 @@ $('#modEditar').submit(function(e){
     .fail(function() {
         console.log("error");
     })  
+})
+
+$('body').on('click','.eliminar', function(){
+    let id = $(this).data('id')
+    Swal.fire({
+        title: 'Esta seguro de eliminar este producto?',
+        text: "¡No podrás revertir esto!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: 'controlador/menu.php',
+                type: 'POST',
+                dataType: 'json',
+                data: {opcn: 'eliminarXid',id},
+            })
+            .done(function(res) {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Operacion Exitosa',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                listarproyectos()
+            })
+            .fail(function() {
+                console.log("error");
+            }) 
+          
+        }
+      })
 })
 

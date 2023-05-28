@@ -20,6 +20,10 @@
                     $respuesta = Proyectos::update($_POST);
                     echo json_encode($respuesta);
                     break;
+                case 'eliminarXid':
+                    $respuesta = Proyectos::eliminarXid($_POST);
+                    echo json_encode($respuesta);
+                    break;
                 
             }
     }

@@ -56,5 +56,18 @@ class Proyectos {
         return $update;
     }
 
+    public static function eliminarXid($v){
+        include_once('../config/init_db.php');
+        DB::$encoding = 'utf8';
+        $eliminar = DB ::query("UPDATE 
+                                    proyectos 
+                                SET
+                                    estado = 'Finalizado'
+                                
+                                WHERE id_proyectos         = '{$v['id']}'");
+        return $eliminar;
+
+}
+
    
 }
